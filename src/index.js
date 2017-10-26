@@ -30,11 +30,11 @@ class Board extends React.Component {
 
   render() {
     var cells = [];
+    var index = 0;
     for(var j =0; j< this.props.colCt;j++){
-
-    cells.push(this.renderCol(i));
+    cells.push(this.renderCol(j));
     for (var i=0; i < this.props.rowCt; i++) {
-        cells.push(this.renderSquare(i));
+        cells.push(this.renderSquare(index++));
         }
 
        // cell.push( here ={return(<div>)};
